@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codelane Learning</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+    <div class="titlebox">
+      <h1 class="title text">Welcome to Codelane</h1>
+      <h2 class="title subtext">A code learning platform</h2>
+    </div>
+    
+    <button id="startButton">Start Learning</button>
+    <script>
+      function changePage() {
+        window.location.href = "selection.html";
+      }
+
+      document.getElementById("startButton").addEventListener("click", changePage)
+    </script>
+</body>
+</html>
