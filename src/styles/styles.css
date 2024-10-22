@@ -8,6 +8,7 @@ color palette for reference: https://colorhunt.co/palette/070f2b1b1a55535c919290
 
 body {
     background-color: #070F2B;
+    overflow-y: auto;
 }
 
 button {
@@ -63,15 +64,16 @@ button {
 /* Main site */
 
 .banner {
-    position: absolute;
+    position: fixed;
     background-color: #1B1A55;
     top: 0px;
     left: 0px;
-    width: 100%;
-    height: 20%;
+    width: 98%;
+    height: 10%;
     padding: 1%;
     display: flex;
     align-items: center;
+    z-index: 2;
 }
 
 .stat {
@@ -82,4 +84,26 @@ button {
     font-size: 32px;
     padding: 20px;
     color: #9290C3;
+}
+
+.line {
+    position: absolute;
+    background-color: #535C91;
+    transform: translate(-50%);
+    top: 500px;
+    left: 50%;
+    width: 20px;
+    height: 7000px;
+}
+
+.node {
+    position: absolute;
+    top: 480px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 50px;
+    height: 50px;
+    background-color: #535C91;
+    border-radius: 50%;
+
 }
