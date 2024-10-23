@@ -107,3 +107,25 @@ button {
     border-radius: 50%;
 
 }
+
+.node-button {
+    position: absolute;
+    top: 490px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 30px;
+    height: 30px;
+    background-color: #9290C3;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.lesson-info {
+    visibility: hidden;
+    position: absolute;
+    top: 400px;
+    left: 55%;
+    width: 300px;
+    height: 200px;
+    background-color: #535C91;
+}
