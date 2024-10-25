@@ -53,6 +53,18 @@ class LessonInfo {
     }
 }
 
+async function loadJSON(data_file) {
+    try {
+        const response = await fetch(data_file);
+        if (!response.ok) {
+            throw new Error(`Failed to fetch: ${response.status}`);
+        }
+        data_lessons = await response.json();
+    } catch (error) {
+        console.error('There was an error loading the JSON:', error);
+    }
+}
+
 function drawRoadmap(count) {
     const container = document.querySelector('#roadmap');
     const node = document.querySelector('.node');
@@ -89,7 +101,10 @@ function play_lesson(lesson_id) {
     window.location.href = "lesson.html";
 }
 
-// initialize site
+
+//=== Initialize Site ===//
+loadJSON('../data/lessons.json')
+
 const container = document.querySelector('#roadmap');
 const button_template = document.querySelector('.node-button');
 
