@@ -37,9 +37,12 @@ class LessonInfo {
         new_lesson_info.classList.add('new_lesson_info');
         
         const lesson_title = this.temp_title.cloneNode(true);
+        lesson_title.textContent = data_lessons[this.id][0];
+        console.log(data_lessons[this.id][0])
         lesson_title.style.visibility = 'visible';
 
         const lesson_type = this.temp_type.cloneNode(true);
+        lesson_type.textContent = data_lessons[this.id][1];
         lesson_type.style.visibility = 'visible';
 
         const lesson_button = this.temp_button.cloneNode(true);
@@ -112,7 +115,7 @@ if (localStorage.getItem('last_lesson_id') == null) {
     localStorage.setItem('last_lesson_id', '1');
 }
 
-localStorage.setItem('last_lesson_id', '5'); // debug REMOVE THIS LATER !!
+localStorage.setItem('last_lesson_id', '36'); // debug REMOVE THIS LATER !!
 
-drawRoadmap(35);
+drawRoadmap(36);
 
